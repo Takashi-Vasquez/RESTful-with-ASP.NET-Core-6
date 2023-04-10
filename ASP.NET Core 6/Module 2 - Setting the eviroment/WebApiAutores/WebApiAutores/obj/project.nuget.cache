@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "14axx4L2tuGRYiJyPaxufZvGg3iiQX+N0kKlBaSCc6Cny1upQJjE2XI7dobDfY3n+EJALu5FX8bWDIvGwQ+RgQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HugoVásquez\\Documents\\GIT PROYECT\\RESTful-with-ASP.NET-Core-6\\ASP.NET Core 6\\Module 2 - Setting the eviroment\\WebApiAutores\\WebApiAutores\\WebApiAutores.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HugoVásquez\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\HugoVásquez\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\HugoVásquez\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\HugoVásquez\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\HugoVásquez\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\HugoVásquez\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
