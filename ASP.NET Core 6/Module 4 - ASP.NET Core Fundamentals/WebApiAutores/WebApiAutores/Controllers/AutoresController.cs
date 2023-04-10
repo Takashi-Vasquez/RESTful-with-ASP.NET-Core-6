@@ -21,7 +21,7 @@ namespace WebApiAutores.Controllers
         }
 
         [HttpGet("first")]
-        public async Task<ActionResult<Autor>> firstAutor()
+        public async Task<ActionResult<Autor>> firstAutor([FromHeader] int miValor, [FromQuery] string nombre)
         {
             return await context.Autores.FirstOrDefaultAsync();
         }
@@ -33,7 +33,7 @@ namespace WebApiAutores.Controllers
         }
 
         [HttpGet("{name}")]
-        public async Task<ActionResult<Autor>> GetAutorByName(string name)
+        public async Task<ActionResult<Autor>> GetAutorByName([FromRoute] string name)
         {
             var autor = await context.Autores.FirstOrDefaultAsync(x => x.Name.Contains(name));
             if (autor == null) return NotFound();
@@ -42,7 +42,7 @@ namespace WebApiAutores.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create(Autor autor)
+        public async Task<ActionResult> Create([FromBody] Autor autor)
         {
             context.Add(autor);
             await context.SaveChangesAsync();
