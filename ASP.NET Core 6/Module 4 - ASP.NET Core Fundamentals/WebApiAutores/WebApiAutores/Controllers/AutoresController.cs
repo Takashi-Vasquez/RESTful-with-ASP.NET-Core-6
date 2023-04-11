@@ -44,6 +44,9 @@ namespace WebApiAutores.Controllers
         [HttpPost]
         public async Task<ActionResult> Create([FromBody] Autor autor)
         {
+            var hasAutor = await context.Autores.AnyAsync(x => x.Name == autor.Name);
+            if (hasAutor) return BadRequest("Ya existe un autor con el mismo nombre");
+
             context.Add(autor);
             await context.SaveChangesAsync();
             return Ok();

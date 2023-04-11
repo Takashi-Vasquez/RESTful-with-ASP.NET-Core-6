@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApiAutores.Entities
 {
@@ -8,21 +7,22 @@ namespace WebApiAutores.Entities
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [StringLength(maximumLength: 5, ErrorMessage = "El campo {0} no debe de tener más de {1} carácteres")]
+        [StringLength(maximumLength: 15, ErrorMessage = "El campo {0} no debe de tener más de {1} carácteres")]
         //[CapitalLetter Attribute]
         public string Name { get; set; }
-        [Range(18, 120)]
-        [NotMapped]
-        public int Age { get; set; }
-        [CreditCard]
-        public string TarjetaDeCredito { get; set; }
-        [Url]
-        public string URL { get; set; }
         public string Description { get; set; }
-
-        public int Menor { get; set; }
-        public int Mayor { get; set; }
         public List<Libro> books { get; set; }
+
+        //[Range(18, 120)]
+        //[NotMapped]
+        //public int Age { get; set; }
+        //[CreditCard]
+        //public string TarjetaDeCredito { get; set; }
+        //[Url]
+        //public string URL { get; set; }
+
+        //public int Menor { get; set; }
+        //public int Mayor { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
@@ -36,11 +36,11 @@ namespace WebApiAutores.Entities
                 }
             }
 
-            if (Menor > Mayor)
-            {
-                yield return new ValidationResult("Estevalor no puede ser más grande que el campo Mayor",
-                   new string[] { nameof(Menor) });
-            }
+            //if (Menor > Mayor)
+            //{
+            //    yield return new ValidationResult("Estevalor no puede ser más grande que el campo Mayor",
+            //new string[] { nameof(Menor) });
+            //}
         }
     }
 }
