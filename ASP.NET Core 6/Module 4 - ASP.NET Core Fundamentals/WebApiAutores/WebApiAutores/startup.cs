@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
+using WebApiAutores.Controllers;
 
 namespace WebApiAutores
 {
@@ -8,6 +9,7 @@ namespace WebApiAutores
     {
         public Startup(IConfiguration configuration)
         {
+            var autoresController = new AutoresController(new ApplicationDbContext());
             Configuration = configuration;
         }
 
